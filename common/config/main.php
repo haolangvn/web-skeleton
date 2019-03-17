@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'name' => 'Minus 417',
+    'name' => 'Web Skeleton',
     'timeZone' => 'Etc/GMT+7',
     'vendorPath' => dirname(dirname(__DIR__)) . '/vendor',
     'aliases' => [
@@ -15,9 +15,6 @@ return [
         'users' => [
             'class' => 'modules\users\Module',
         ],
-//        'rbac' => [
-//            'class' => 'modules\rbac\Module',
-//        ],
         'demo' => [
             'class' => 'modules\demo\Module'
         ]

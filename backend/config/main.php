@@ -22,12 +22,6 @@ return [
         'users' => [
             'isBackend' => true,
         ],
-//        'rbac' => [
-//            'class' => 'modules\rbac\Module',
-//            'params' => [
-//                'userClass' => 'modules\users\models\User',
-//            ]
-//        ],
         'rbac' => [
             'class' => 'modules\srbac\Module',
         ],

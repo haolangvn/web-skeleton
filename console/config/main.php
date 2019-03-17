@@ -14,7 +14,6 @@ return [
         'log',
         'modules\main\Bootstrap',
         'modules\users\Bootstrap',
-        'modules\rbac\Bootstrap',
     ],
     'controllerNamespace' => 'console\controllers',
     'controllerMap' => [
@@ -29,9 +28,6 @@ return [
     'modules' => [
         'rbac' => [
             'class' => 'modules\rbac\Module',
-            'params' => [
-                'userClass' => 'modules\users\models\User',
-            ]
         ],
     ],
     'components' => [

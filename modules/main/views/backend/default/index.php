@@ -2,7 +2,6 @@
 
 use yii\helpers\Url;
 use modules\users\Module as UserModule;
-use modules\rbac\Module as RbacModule;
 use modules\main\Module;
 
 /* @var $this yii\web\View */
