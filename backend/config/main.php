@@ -103,7 +103,7 @@ return [
         ],
     ],
     'as access' => [
-        'class' => modules\srbac\filters\AccessControl::class,
+        'class' => modules\rbac\filters\AccessControl::class,
         'allowActions' => [
             'users/default/*',
             'rbac/*',

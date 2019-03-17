@@ -24,11 +24,6 @@ return [
             ],
         ],
     ],
-//    'modules' => [
-//        'rbac' => [
-//            'class' => 'modules\rbac\ConsoleModule',
-//        ],
-//    ],
     'components' => [
         'log' => [
             'targets' => [
