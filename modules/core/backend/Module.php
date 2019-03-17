@@ -8,5 +8,7 @@ namespace modules\core\backend;
  * @author HAO
  */
 class Module extends \yii\base\Module {
-    
+
+    private $_basePath = '@modules/core/backend';
+
 }

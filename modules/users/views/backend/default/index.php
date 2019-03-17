@@ -169,23 +169,23 @@ $this->registerJs($js, \yii\web\View::POS_END);
                             'style' => 'width:150px',
                         ],
                     ],
-                    [
-                        'attribute' => 'userRoleName',
-                        'filter' => Html::activeDropDownList($searchModel, 'userRoleName', $assignModel->getRolesArray(), [
-                            'class' => 'form-control',
-                            'prompt' => Module::t('module', '- all -'),
-                            'data' => [
-                                'pjax' => true,
-                            ],
-                        ]),
-                        'format' => 'raw',
-                        'value' => function ($data) use ($assignModel) {
-                            return $assignModel->getUserRoleName($data->id);
-                        },
-                        'contentOptions' => [
-                            'style' => 'width:200px',
-                        ],
-                    ],
+//                    [
+//                        'attribute' => 'userRoleName',
+//                        'filter' => Html::activeDropDownList($searchModel, 'userRoleName', $assignModel->getRolesArray(), [
+//                            'class' => 'form-control',
+//                            'prompt' => Module::t('module', '- all -'),
+//                            'data' => [
+//                                'pjax' => true,
+//                            ],
+//                        ]),
+//                        'format' => 'raw',
+//                        'value' => function ($data) use ($assignModel) {
+//                            return $assignModel->getUserRoleName($data->id);
+//                        },
+//                        'contentOptions' => [
+//                            'style' => 'width:200px',
+//                        ],
+//                    ],
                     [
                         'attribute' => 'profile.last_visit',
                         'filter' => '<div class="form-group"><div class="input-group date"><div class="input-group-addon"><i class="fa fa-calendar"></i></div>'

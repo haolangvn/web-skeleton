@@ -23,7 +23,6 @@ return [
             'isBackend' => true,
         ],
         'rbac' => 'modules\rbac\Module',
-        'core' => 'modules\core\backend\Module',
         
         
         'demo' => [

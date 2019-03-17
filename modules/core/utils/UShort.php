@@ -1,6 +1,6 @@
 <?php
 
-namespace modules\cor\util;
+namespace modules\core\utils;
 
 use Yii;
 

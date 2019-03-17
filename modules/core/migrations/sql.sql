@@ -70,4 +70,32 @@ ALTER TABLE `core_translate`
 --
 ALTER TABLE `core_translate`
   MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+
+-- ------------------
+
+CREATE TABLE `core_language` (
+  `code` varchar(12) COLLATE utf8_unicode_ci NOT NULL COMMENT 'Language code: "vi" or "vi_VN".',
+  `name` varchar(64) COLLATE utf8_unicode_ci NOT NULL COMMENT 'Language name in English.',
+  `native` varchar(64) COLLATE utf8_unicode_ci NOT NULL COMMENT 'Native language name.'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `tbl_language`
+--
+
+INSERT INTO `core_language` (`code`, `name`, `native`) VALUES
+('en', 'English', 'Tiếng anh'),
+('vi', 'Vietnamese', 'Tiếng Việt');
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `tbl_language`
+--
+ALTER TABLE `core_language`
+  ADD PRIMARY KEY (`code`);
+
+
 COMMIT;

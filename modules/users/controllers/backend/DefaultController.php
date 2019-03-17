@@ -5,12 +5,9 @@ namespace modules\users\controllers\backend;
 use Yii;
 use yii\web\Response;
 use yii\web\Controller;
-use yii\filters\VerbFilter;
-use yii\filters\AccessControl;
 use yii\web\NotFoundHttpException;
 use modules\users\models\LoginForm;
-use modules\rbac\models\Permission;
-use modules\rbac\models\Assignment;
+use yii\rbac\Assignment;
 use modules\users\models\User;
 use modules\users\models\search\UserSearch;
 use modules\users\Module;
@@ -22,67 +19,14 @@ use modules\users\Module;
  * @property array $access
  * @property  array $verb
  */
-class DefaultController extends Controller
-{
-    /**
-     * @inheritdoc
-     * @return array
-     */
-//    public function behaviors()
-//    {
-//        return [
-//            'verbs' => $this->getVerb(),
-//            'access' => $this->getAccess()
-//        ];
-//    }
-//
-//    /**
-//     * @return array
-//     */
-//    private function getVerb()
-//    {
-//        return [
-//            'class' => VerbFilter::class,
-//            'actions' => [
-//                'delete' => ['POST'],
-//                'logout' => ['POST'],
-//            ],
-//        ];
-//    }
-
-    /**
-     * @return array
-     */
-//    private function getAccess()
-//    {
-//        return [
-//            'class' => AccessControl::class,
-//            'rules' => [
-//                [
-//                    'actions' => ['login', 'index'],
-//                    'allow' => true,
-//                    'roles' => ['?']
-//                ],
-//                [
-//                    'actions' => ['index'],
-//                    'allow' => true,
-//                    'roles' => ['@']
-//                ],
-////                [
-////                    'allow' => true,
-////                    'roles' => [Permission::PERMISSION_MANAGER_USERS]
-////                ],
-//            ],
-//        ];
-//    }
+class DefaultController extends Controller {
 
     /**
      * Login action.
      *
      * @return string|\yii\web\Response
      */
-    public function actionLogin()
-    {
+    public function actionLogin() {
         if (!Yii::$app->user->isGuest) {
             return $this->goHome();
         }
@@ -94,21 +38,20 @@ class DefaultController extends Controller
             return $this->processCheckPermissionLogin();
         }
         return $this->render('login', [
-            'model' => $model,
+                    'model' => $model,
         ]);
     }
 
     /**
      * @return \yii\web\Response
      */
-    protected function processCheckPermissionLogin()
-    {
+    protected function processCheckPermissionLogin() {
         // If access to Backend is denied, reset authorization, write a message to the session
         // and move it to the login page
 //        if (!Yii::$app->user->can(Permission::PERMISSION_VIEW_ADMIN_PAGE)) {
 //            Yii::$app->user->logout();
 //            Yii::$app->session->setFlash('error', Module::t('module', 'You do not have rights, access is denied.'));
-            return $this->goHome();
+        return $this->goHome();
 //        }
         return $this->goBack();
     }
@@ -118,8 +61,7 @@ class DefaultController extends Controller
      *
      * @return \yii\web\Response
      */
-    public function actionLogout()
-    {
+    public function actionLogout() {
         $model = new LoginForm();
         $model->logout();
         return $this->goHome();
@@ -129,15 +71,14 @@ class DefaultController extends Controller
      * @return string
      * @throws \yii\base\InvalidConfigException
      */
-    public function actionIndex()
-    {
+    public function actionIndex() {
         $searchModel = new UserSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
         $assignModel = new Assignment();
         return $this->render('index', [
-            'searchModel' => $searchModel,
-            'dataProvider' => $dataProvider,
-            'assignModel' => $assignModel,
+                    'searchModel' => $searchModel,
+                    'dataProvider' => $dataProvider,
+                    'assignModel' => $assignModel,
         ]);
     }
 
@@ -147,15 +88,14 @@ class DefaultController extends Controller
      * @return string|\yii\web\Response
      * @throws NotFoundHttpException
      */
-    public function actionView($id)
-    {
+    public function actionView($id) {
         if ($model = $this->findModel($id)) {
             $assignModel = new Assignment([
                 'user' => $model
             ]);
             return $this->render('view', [
-                'model' => $model,
-                'assignModel' => $assignModel,
+                        'model' => $model,
+                        'assignModel' => $assignModel,
             ]);
         }
         return $this->redirect(['index']);
@@ -166,8 +106,7 @@ class DefaultController extends Controller
      * @return string|Response
      * @throws \yii\base\Exception
      */
-    public function actionCreate()
-    {
+    public function actionCreate() {
         $model = new User();
         $model->scenario = $model::SCENARIO_ADMIN_CREATE;
         $model->status = $model::STATUS_WAIT;
@@ -178,7 +117,7 @@ class DefaultController extends Controller
             }
         }
         return $this->render('create', [
-            'model' => $model,
+                    'model' => $model,
         ]);
     }
 
@@ -188,8 +127,7 @@ class DefaultController extends Controller
      * @throws NotFoundHttpException
      * @throws \yii\base\Exception
      */
-    public function actionUpdate($id)
-    {
+    public function actionUpdate($id) {
         $model = $this->findModel($id);
         if ($model->load(Yii::$app->request->post()) && $model->profile->load(Yii::$app->request->post())) {
             if (!empty($model->password)) {
@@ -200,7 +138,7 @@ class DefaultController extends Controller
             }
         }
         return $this->render('update', [
-            'model' => $model,
+                    'model' => $model,
         ]);
     }
 
@@ -209,8 +147,7 @@ class DefaultController extends Controller
      * @return array|Response
      * @throws NotFoundHttpException
      */
-    public function actionSetStatus($id)
-    {
+    public function actionSetStatus($id) {
         if (Yii::$app->request->isAjax) {
             Yii::$app->response->format = Response::FORMAT_JSON;
             $result = $this->processChangeStatus($id);
@@ -227,8 +164,7 @@ class DefaultController extends Controller
      * @return User
      * @throws NotFoundHttpException
      */
-    protected function processChangeStatus($id)
-    {
+    protected function processChangeStatus($id) {
         $model = $this->findModel($id);
         /** @var User $identity */
         $identity = Yii::$app->user->identity;
@@ -244,8 +180,7 @@ class DefaultController extends Controller
      * @return array|Response
      * @throws NotFoundHttpException
      */
-    public function actionSendConfirmEmail($id)
-    {
+    public function actionSendConfirmEmail($id) {
         if (Yii::$app->request->isAjax) {
             Yii::$app->response->format = Response::FORMAT_JSON;
             $result = $this->processSendEmail($id);
@@ -263,8 +198,7 @@ class DefaultController extends Controller
      * @return array|User|null
      * @throws NotFoundHttpException
      */
-    protected function processSendEmail($id)
-    {
+    protected function processSendEmail($id) {
         $model = $this->findModel($id);
         $model->generateEmailConfirmToken();
         $model->save(false);
@@ -278,8 +212,7 @@ class DefaultController extends Controller
      * @return array|Response
      * @throws NotFoundHttpException
      */
-    public function actionGenerateAuthKey($id)
-    {
+    public function actionGenerateAuthKey($id) {
         $model = $this->processGenerateAuthKey($id);
         if (Yii::$app->request->isAjax) {
             Yii::$app->response->format = Response::FORMAT_JSON;
@@ -296,8 +229,7 @@ class DefaultController extends Controller
      * @return User|null
      * @throws NotFoundHttpException
      */
-    private function processGenerateAuthKey($id)
-    {
+    private function processGenerateAuthKey($id) {
         $model = $this->findModel($id);
         $model->generateAuthKey();
         $model->save();
@@ -314,8 +246,7 @@ class DefaultController extends Controller
      * @throws \Throwable
      * @throws \yii\db\StaleObjectException
      */
-    public function actionDelete($id)
-    {
+    public function actionDelete($id) {
         $model = $this->findModel($id);
         if (!$model->isSuperAdmin()) {
             if ($model->isDeleted()) {
@@ -338,11 +269,11 @@ class DefaultController extends Controller
      * @return null|User the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
-    protected function findModel($id)
-    {
+    protected function findModel($id) {
         if (($model = User::findOne($id)) !== null) {
             return $model;
         }
         throw new NotFoundHttpException(Module::t('module', 'The requested page does not exist.'));
     }
+
 }

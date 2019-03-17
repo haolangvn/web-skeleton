@@ -1,8 +1,7 @@
 <?php
 
-namespace modules\cor\util;
+namespace modules\core\utils;
 
-use modules\cor\util\UShort;
 use modules\core\models\Translate;
 
 /**

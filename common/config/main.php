@@ -9,6 +9,8 @@ return [
         '@npm' => '@vendor/npm-asset',
     ],
     'modules' => [
+        'core' => 'modules\core\backend\Module',
+        
         'main' => [
             'class' => 'modules\main\Module',
         ],
@@ -43,5 +45,8 @@ return [
             'appendTimestamp' => true,
             'basePath' => '@app/web/assets',
         ],
+//        'pathMap' => [
+//            '@modules' => '@app/modules'
+//        ]
     ],
 ];
