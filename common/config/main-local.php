@@ -3,7 +3,7 @@ return [
     'components' => [
         'db' => [
             'class' => 'yii\db\Connection',
-            'dsn' => 'mysql:host=localhost;dbname=yii-cms',
+            'dsn' => 'mysql:host=localhost;dbname=web-skeleton_git',
             'username' => 'root',
             'password' => '',
             'charset' => 'utf8',
