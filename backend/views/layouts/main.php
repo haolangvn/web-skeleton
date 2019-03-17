@@ -165,7 +165,7 @@ $homeUrl = is_string(Yii::$app->homeUrl) ? Yii::$app->homeUrl : '/';
                             'label' => '<i class="fa fa-unlock"></i> <span>' . Yii::t('app', 'RBAC') . '</span> <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span>',
                             'url' => ['/rbac'],
                             'options' => ['class' => 'treeview'],
-                            'visible' => Yii::$app->user->can('admin'),
+                            'visible' => Yii::$app->user->can('AdminPermission'),
                             'items' => [
                                 [
                                     'label' => '<i class="fa fa-circle-o"> </i><span>' . Yii::t('app', 'Route') . '</span>',

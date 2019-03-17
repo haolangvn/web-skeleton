@@ -2,12 +2,12 @@
 
 use yii\helpers\Html;
 use yii\helpers\Json;
-use modules\srbac\RbacAsset;
+use modules\rbac\RbacAsset;
 
 RbacAsset::register($this);
 
 /* @var $this yii\web\View */
-/* @var $model \modules\srbac\models\AssignmentModel */
+/* @var $model \modules\rbac\models\AssignmentModel */
 /* @var $usernameField string */
 
 $userName = $model->user->{$usernameField};

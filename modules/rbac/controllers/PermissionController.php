@@ -1,14 +1,14 @@
 <?php
 
-namespace modules\srbac\controllers;
+namespace modules\rbac\controllers;
 
 use yii\rbac\Item;
-use modules\srbac\base\ItemController;
+use modules\rbac\base\ItemController;
 
 /**
  * Class PermissionController
  *
- * @package modules\srbac\controllers
+ * @package modules\rbac\controllers
  */
 class PermissionController extends ItemController
 {

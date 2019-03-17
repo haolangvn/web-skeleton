@@ -1,6 +1,6 @@
 <?php
 
-namespace modules\srbac\models;
+namespace modules\rbac\models;
 
 use Yii;
 use yii\base\BaseObject;
@@ -12,7 +12,7 @@ use yii\helpers\VarDumper;
 /**
  * Class RouteModel
  *
- * @package modules\srbac\models
+ * @package modules\rbac\models
  */
 class RouteModel extends BaseObject
 {

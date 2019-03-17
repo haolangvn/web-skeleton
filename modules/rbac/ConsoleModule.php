@@ -1,6 +1,6 @@
 <?php
 
-namespace modules\srbac;
+namespace modules\rbac;
 
 /**
  * Class ConsoleModule
@@ -10,7 +10,7 @@ namespace modules\srbac;
  * ```php
  * 'controllerMap' => [
  *     'migrate' => [
- *         'class' => 'modules\srbac\commands\MigrateController',
+ *         'class' => 'modules\rbac\commands\MigrateController',
  *         'migrationTable' => '{{%auth_migration}}',
  *         'migrationPath' => '@app/rbac/migrations',
  *         'templateFile' => 'your own template file'
@@ -23,5 +23,5 @@ class ConsoleModule extends Module
     /**
      * @var string the namespace that controller classes are in
      */
-    public $controllerNamespace = 'modules\srbac\commands';
+    public $controllerNamespace = 'modules\rbac\commands';
 }

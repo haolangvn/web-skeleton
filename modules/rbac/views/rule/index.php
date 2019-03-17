@@ -6,7 +6,7 @@ use yii\widgets\Pjax;
 
 /* @var $this yii\web\View */
 /* @var $dataProvider \yii\data\ArrayDataProvider */
-/* @var $searchModel modules\srbac\models\search\BizRuleSearch */
+/* @var $searchModel modules\rbac\models\search\BizRuleSearch */
 
 $this->title = Yii::t('yii2mod.rbac', 'Rules');
 $this->params['breadcrumbs'][] = $this->title;

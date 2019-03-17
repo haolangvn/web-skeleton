@@ -5,7 +5,7 @@
 echo "<?php\n";
 ?>
 
-use modules\srbac\migrations\Migration;
+use modules\rbac\migrations\Migration;
 
 class <?= $className; ?> extends Migration
 {

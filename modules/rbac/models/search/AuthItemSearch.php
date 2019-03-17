@@ -1,6 +1,6 @@
 <?php
 
-namespace modules\srbac\models\search;
+namespace modules\rbac\models\search;
 
 use dosamigos\arrayquery\ArrayQuery;
 use Yii;
@@ -11,7 +11,7 @@ use yii\rbac\Item;
 /**
  * Class AuthItemSearch
  *
- * @package modules\srbac\models\search
+ * @package modules\rbac\models\search
  */
 class AuthItemSearch extends Model
 {

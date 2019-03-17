@@ -1,7 +1,7 @@
 <?php
 
 /* @var $this yii\web\View */
-/* @var $model \modules\srbac\models\BizRuleModel */
+/* @var $model \modules\rbac\models\BizRuleModel */
 
 $this->title = Yii::t('yii2mod.rbac', 'Update Rule : {0}', $model->name);
 $this->params['breadcrumbs'][] = ['label' => Yii::t('yii2mod.rbac', 'Rules'), 'url' => ['index']];

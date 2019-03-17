@@ -1,6 +1,6 @@
 <?php
 
-namespace modules\srbac\base;
+namespace modules\rbac\base;
 
 use Yii;
 use yii\filters\VerbFilter;
@@ -8,13 +8,13 @@ use yii\rbac\Item;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\web\Response;
-use modules\srbac\models\AuthItemModel;
-use modules\srbac\models\search\AuthItemSearch;
+use modules\rbac\models\AuthItemModel;
+use modules\rbac\models\search\AuthItemSearch;
 
 /**
  * Class ItemController
  *
- * @package modules\srbac\base
+ * @package modules\rbac\base
  */
 class ItemController extends Controller
 {

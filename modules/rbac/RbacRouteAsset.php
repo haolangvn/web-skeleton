@@ -1,11 +1,11 @@
 <?php
 
-namespace modules\srbac;
+namespace modules\rbac;
 
 /**
  * Class RbacRouteAsset
  *
- * @package modules\srbac
+ * @package modules\rbac
  */
 class RbacRouteAsset extends RbacAsset
 {

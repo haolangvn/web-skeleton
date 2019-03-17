@@ -1,18 +1,18 @@
 <?php
 
-namespace modules\srbac\controllers;
+namespace modules\rbac\controllers;
 
 use Yii;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\web\Response;
-use modules\srbac\models\AssignmentModel;
-use modules\srbac\models\search\AssignmentSearch;
+use modules\rbac\models\AssignmentModel;
+use modules\rbac\models\search\AssignmentSearch;
 
 /**
  * Class AssignmentController
  *
- * @package modules\srbac\controllers
+ * @package modules\rbac\controllers
  */
 class AssignmentController extends Controller
 {

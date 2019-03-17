@@ -23,7 +23,7 @@ return [
             'isBackend' => true,
         ],
         'rbac' => [
-            'class' => 'modules\srbac\Module',
+            'class' => 'modules\rbac\Module',
         ],
         'demo' => [
             'isBackend' => true,
@@ -106,7 +106,7 @@ return [
         'class' => modules\srbac\filters\AccessControl::class,
         'allowActions' => [
             'users/default/*',
-            'admin/*',
+            'rbac/*',
         // The actions listed here will be allowed to everyone including guests.
         // So, 'admin/*' should not appear here in the production, of course.
         // But in the earlier stages of your development, you may probably want to
@@ -118,10 +118,5 @@ return [
     'as afterAction' => [
         'class' => '\modules\users\behavior\LastVisitBehavior',
     ],
-    // Доступ к админке
-//    'as AccessBehavior' => [
-//        'class' => '\modules\rbac\components\behavior\AccessBehavior',
-//        'permission' => \modules\rbac\models\Permission::PERMISSION_VIEW_ADMIN_PAGE, // Разрешение доступа к админке
-//    ],
     'params' => $params,
 ];

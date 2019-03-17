@@ -1,6 +1,6 @@
 <?php
 
-namespace modules\srbac\rules;
+namespace modules\rbac\rules;
 
 use Yii;
 use yii\rbac\Rule;
@@ -8,7 +8,7 @@ use yii\rbac\Rule;
 /**
  * Class GuestRule
  *
- * @package modules\srbac\rules
+ * @package modules\rbac\rules
  */
 class GuestRule extends Rule
 {

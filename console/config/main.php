@@ -20,16 +20,15 @@ return [
         'migrate' => [
             'class' => 'yii\console\controllers\MigrateController',
             'migrationNamespaces' => [
-                'modules\rbac\migrations',
                 'modules\users\migrations',
             ],
         ],
     ],
-    'modules' => [
-        'rbac' => [
-            'class' => 'modules\rbac\Module',
-        ],
-    ],
+//    'modules' => [
+//        'rbac' => [
+//            'class' => 'modules\rbac\ConsoleModule',
+//        ],
+//    ],
     'components' => [
         'log' => [
             'targets' => [

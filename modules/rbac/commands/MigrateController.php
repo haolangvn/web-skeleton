@@ -1,6 +1,6 @@
 <?php
 
-namespace modules\srbac\commands;
+namespace modules\rbac\commands;
 
 use yii\console\controllers\BaseMigrateController;
 use yii\db\Connection;
@@ -39,12 +39,12 @@ class MigrateController extends BaseMigrateController
     /**
      * @inheritdoc
      */
-    public $migrationPath = '@app/rbac/migrations';
+    public $migrationPath = '@modules/rbac/migrations';
 
     /**
      * @inheritdoc
      */
-    public $templateFile = '@vendor/yii2mod/yii2-rbac/views/migration.php';
+    public $templateFile = '@modules/rbac/views/migration.php';
 
     /**
      * @inheritdoc

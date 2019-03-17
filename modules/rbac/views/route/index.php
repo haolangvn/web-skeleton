@@ -2,7 +2,7 @@
 
 use yii\helpers\Html;
 use yii\helpers\Json;
-use modules\srbac\RbacRouteAsset;
+use modules\rbac\RbacRouteAsset;
 
 RbacRouteAsset::register($this);
 

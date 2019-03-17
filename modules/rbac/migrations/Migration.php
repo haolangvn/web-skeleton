@@ -1,6 +1,6 @@
 <?php
 
-namespace modules\srbac\migrations;
+namespace modules\rbac\migrations;
 
 use yii\base\Component;
 use yii\base\InvalidParamException;
@@ -15,7 +15,7 @@ use yii\rbac\Rule;
 /**
  * Class Migration
  *
- * @package modules\srbac\migrations
+ * @package modules\rbac\migrations
  */
 class Migration extends Component implements MigrationInterface
 {

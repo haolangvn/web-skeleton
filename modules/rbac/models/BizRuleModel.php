@@ -1,6 +1,6 @@
 <?php
 
-namespace modules\srbac\models;
+namespace modules\rbac\models;
 
 use Yii;
 use yii\base\Model;
@@ -9,7 +9,7 @@ use yii\rbac\Rule;
 /**
  * Class BizRuleModel
  *
- * @package modules\srbac\models
+ * @package modules\rbac\models
  */
 class BizRuleModel extends Model
 {

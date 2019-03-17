@@ -3,12 +3,12 @@
 use yii\helpers\Html;
 use yii\helpers\Json;
 use yii\widgets\DetailView;
-use modules\srbac\RbacAsset;
+use modules\rbac\RbacAsset;
 
 RbacAsset::register($this);
 
 /* @var $this yii\web\View */
-/* @var $model \modules\srbac\models\AuthItemModel */
+/* @var $model \modules\rbac\models\AuthItemModel */
 
 $labels = $this->context->getLabels();
 $this->title = Yii::t('yii2mod.rbac', $labels['Item'] . ' : {0}', $model->name);

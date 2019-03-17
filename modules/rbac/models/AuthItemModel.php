@@ -1,6 +1,6 @@
 <?php
 
-namespace modules\srbac\models;
+namespace modules\rbac\models;
 
 use Yii;
 use yii\base\Model;

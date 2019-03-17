@@ -1,13 +1,13 @@
 <?php
 
-namespace modules\srbac;
+namespace modules\rbac;
 
 use yii\web\AssetBundle;
 
 /**
  * Class RbacAsset
  *
- * @package modules\srbac
+ * @package modules\rbac
  */
 class RbacAsset extends AssetBundle
 {

@@ -1,7 +1,7 @@
 <?php
 
 /* @var $this yii\web\View */
-/* @var $model \modules\srbac\models\AuthItemModel */
+/* @var $model \modules\rbac\models\AuthItemModel */
 
 $context = $this->context;
 $labels = $this->context->getLabels();

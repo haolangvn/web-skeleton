@@ -32,7 +32,7 @@ $this->params['title']['small'] = Module::t('module', 'Dashboard');
                             <i class="fa fa-users"></i> <?= UserModule::t('module', 'Users'); ?>
                         </a>
                         <?php // if (\Yii::$app->user->can(\modules\rbac\models\Permission::PERMISSION_MANAGER_RBAC)) : ?>
-                            <a class="btn btn-app" href="<?= Url::to(['/rbac/default/index']); ?>">
+                            <a class="btn btn-app" href="<?= Url::to(['/rbac/assignment/index']); ?>">
                                 <i class="fa fa-unlock"></i> <?= UserModule::t('module', 'RBAC'); ?>
                             </a>
                         <?php // endif; ?>

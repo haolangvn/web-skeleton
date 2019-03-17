@@ -1,6 +1,6 @@
 <?php
 
-namespace modules\srbac;
+namespace modules\rbac;
 
 /**
  * GUI manager for RBAC.
@@ -10,10 +10,10 @@ namespace modules\srbac;
  * ```php
  * 'controllerMap' => [
  *     'assignment' => [
- *         'class' => 'modules\srbac\controllers\AssignmentController',
+ *         'class' => 'modules\rbac\controllers\AssignmentController',
  *         'userIdentityClass' => 'app\models\User',
  *         'searchClass' => [
- *              'class' => 'modules\srbac\models\search\AssignmentSearch',
+ *              'class' => 'modules\rbac\models\search\AssignmentSearch',
  *              'pageSize' => 10,
  *         ],
  *         'idField' => 'id',
@@ -37,5 +37,5 @@ class Module extends \yii\base\Module
     /**
      * @var string the namespace that controller classes are in
      */
-    public $controllerNamespace = 'modules\srbac\controllers';
+    public $controllerNamespace = 'modules\rbac\controllers';
 }
