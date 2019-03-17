@@ -1,6 +1,6 @@
 <?php
 
-namespace modules\core\backend;
+namespace modules\core;
 
 /**
  * Description of Controller

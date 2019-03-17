@@ -22,9 +22,10 @@ return [
         'users' => [
             'isBackend' => true,
         ],
-        'rbac' => [
-            'class' => 'modules\rbac\Module',
-        ],
+        'rbac' => 'modules\rbac\Module',
+        'core' => 'modules\core\backend\Module',
+        
+        
         'demo' => [
             'isBackend' => true,
         ]
