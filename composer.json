@@ -36,16 +36,4 @@
     "config": {
         "process-timeout": 1800
     },
-    "repositories": [
-        {
-            "type": "composer",
-            "url": "https://asset-packagist.org"
-        }
-    ],
-	"authors": [
-        {
-            "name": "kynm",
-            "email": "nguyen.manh.ky@framgia.com"
-        }
-    ],
 }
