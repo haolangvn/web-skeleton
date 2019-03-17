@@ -51106,3 +51106,260 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1552810736.919
     'REQUEST_TIME' => 1552810736
 ]
+2019-03-17 01:26:40 [::1][-][-][error][yii\base\InvalidConfigException] ReflectionException: Class modules\rbac\Bootstrap does not exist in E:\www\2019\repository\web-skeleton\vendor\yiisoft\yii2\di\Container.php:431
+Stack trace:
+#0 E:\www\2019\repository\web-skeleton\vendor\yiisoft\yii2\di\Container.php(431): ReflectionClass->__construct('modules\\rbac\\Bo...')
+#1 E:\www\2019\repository\web-skeleton\vendor\yiisoft\yii2\di\Container.php(365): yii\di\Container->getDependencies('modules\\rbac\\Bo...')
+#2 E:\www\2019\repository\web-skeleton\vendor\yiisoft\yii2\di\Container.php(156): yii\di\Container->build('modules\\rbac\\Bo...', Array, Array)
+#3 E:\www\2019\repository\web-skeleton\vendor\yiisoft\yii2\BaseYii.php(345): yii\di\Container->get('modules\\rbac\\Bo...', Array)
+#4 E:\www\2019\repository\web-skeleton\vendor\yiisoft\yii2\base\Application.php(322): yii\BaseYii::createObject('modules\\rbac\\Bo...')
+#5 E:\www\2019\repository\web-skeleton\vendor\yiisoft\yii2\web\Application.php(69): yii\base\Application->bootstrap()
+#6 E:\www\2019\repository\web-skeleton\vendor\yiisoft\yii2\base\Application.php(273): yii\web\Application->bootstrap()
+#7 E:\www\2019\repository\web-skeleton\vendor\yiisoft\yii2\base\BaseObject.php(109): yii\base\Application->init()
+#8 E:\www\2019\repository\web-skeleton\vendor\yiisoft\yii2\base\Application.php(206): yii\base\BaseObject->__construct(Array)
+#9 E:\www\2019\repository\web-skeleton\backend\web\__debug.php(19): yii\base\Application->__construct('[<span class="s...')
+#10 {main}
+
+Next yii\base\InvalidConfigException: Failed to instantiate component or class "modules\rbac\Bootstrap". in E:\www\2019\repository\web-skeleton\vendor\yiisoft\yii2\di\Container.php:433
+Stack trace:
+#0 E:\www\2019\repository\web-skeleton\vendor\yiisoft\yii2\di\Container.php(365): yii\di\Container->getDependencies('modules\\rbac\\Bo...')
+#1 E:\www\2019\repository\web-skeleton\vendor\yiisoft\yii2\di\Container.php(156): yii\di\Container->build('modules\\rbac\\Bo...', Array, Array)
+#2 E:\www\2019\repository\web-skeleton\vendor\yiisoft\yii2\BaseYii.php(345): yii\di\Container->get('modules\\rbac\\Bo...', Array)
+#3 E:\www\2019\repository\web-skeleton\vendor\yiisoft\yii2\base\Application.php(322): yii\BaseYii::createObject('modules\\rbac\\Bo...')
+#4 E:\www\2019\repository\web-skeleton\vendor\yiisoft\yii2\web\Application.php(69): yii\base\Application->bootstrap()
+#5 E:\www\2019\repository\web-skeleton\vendor\yiisoft\yii2\base\Application.php(273): yii\web\Application->bootstrap()
+#6 E:\www\2019\repository\web-skeleton\vendor\yiisoft\yii2\base\BaseObject.php(109): yii\base\Application->init()
+#7 E:\www\2019\repository\web-skeleton\vendor\yiisoft\yii2\base\Application.php(206): yii\base\BaseObject->__construct(Array)
+#8 E:\www\2019\repository\web-skeleton\backend\web\__debug.php(19): yii\base\Application->__construct('[<span class="s...')
+#9 {main}
+2019-03-17 01:26:39 [::1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-frontend' => 'rqq3clfm4a6ga9oef447u6ov8c'
+    '_csrf' => '117467bf7d5c6e77b3e67e80cf16ebdf03f99df4be239edb52fe68b5a943f5e1a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Flaxvh1SKhw1OFtIakKzaSlh4q19YMav\";}'
+    'PHPSESSID' => 'bumo4pdmo5r0hif5t1bbkd175l'
+    '_csrf_admin' => '9d07e2808d6c775ac048d3587d977af8034d40c69839282bb1dc2ec12ac47d30a:2:{i:0;s:11:\"_csrf_admin\";i:1;s:32:\"c6IgqZeWgvIOLKmMiNeds15RK7MGi9e9\";}'
+    '_csrf-frontend' => '869d95fa8c63fc40d5a3f0208a390e66ab587aeed1345edaf96576b0c2029fc0a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"_WvzqpB6c5EnfbEXgpoLsOFld57dYbYk\";}'
+    'advanced-backend' => 'ipjs8eb2tpfkhbcu383lrpu1ko'
+    '_csrf-backend' => '9ec715fdf1e69d2cc870cb5b5b8288c2815aff60c6aa0091c7d098c65417dc6ca:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"h_0P0skl0o4vojLvLBSMZWN4NeRGm5C0\";}'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'E:/xampp_7.2.1/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'E:/xampp_7.2.1/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => 'advanced-frontend=rqq3clfm4a6ga9oef447u6ov8c; _csrf=117467bf7d5c6e77b3e67e80cf16ebdf03f99df4be239edb52fe68b5a943f5e1a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Flaxvh1SKhw1OFtIakKzaSlh4q19YMav%22%3B%7D; PHPSESSID=bumo4pdmo5r0hif5t1bbkd175l; _csrf_admin=9d07e2808d6c775ac048d3587d977af8034d40c69839282bb1dc2ec12ac47d30a%3A2%3A%7Bi%3A0%3Bs%3A11%3A%22_csrf_admin%22%3Bi%3A1%3Bs%3A32%3A%22c6IgqZeWgvIOLKmMiNeds15RK7MGi9e9%22%3B%7D; _csrf-frontend=869d95fa8c63fc40d5a3f0208a390e66ab587aeed1345edaf96576b0c2029fc0a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22_WvzqpB6c5EnfbEXgpoLsOFld57dYbYk%22%3B%7D; advanced-backend=ipjs8eb2tpfkhbcu383lrpu1ko; _csrf-backend=9ec715fdf1e69d2cc870cb5b5b8288c2815aff60c6aa0091c7d098c65417dc6ca%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22h_0P0skl0o4vojLvLBSMZWN4NeRGm5C0%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files (x86)\\MKVToolNix;C:\\Program Files (x86)\\Microsoft SQL Server\\Client SDK\\ODBC\\110\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\120\\DTS\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\120\\Tools\\Binn\\ManagementStudio\\;C:\\WINDOWS\\system32\\config\\systemprofile\\.dnx\\bin;C:\\Program Files\\Microsoft DNX\\Dnvm\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\110\\DTS\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\130\\DTS\\Binn\\;C:\\Program Files (x86)\\SAP\\SAP Business One DI API\\JCO\\LIB\\;C:\\Program Files (x86)\\SAP\\SAP Business One DI API\\DI API 90;C:\\Program Files (x86)\\SAP\\SAP Business One\\;C:\\Program Files\\PuTTY\\;C:\\WINDOWS\\System32\\OpenSSH\\;E:\\xampp_7.2.1\\php;C:\\Users\\hao.THEGIOINUOCHOA\\AppData\\Local\\ComposerSetup\\bin;C:\\Users\\hao.THEGIOINUOCHOA\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Users\\hao.THEGIOINUOCHOA\\AppData\\Local\\GitHubDesktop\\bin;C:\\Git\\cmd;C:\\Users\\hao.THEGIOINUOCHOA\\AppData\\Local\\Microsoft\\WindowsApps;'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Win32) OpenSSL/1.1.0g PHP/7.2.1 Server at localhost Port 8080</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Win32) OpenSSL/1.1.0g PHP/7.2.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '8080'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'E:/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/www'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'E:/www/2019/repository/web-skeleton/backend/web/__debug.php'
+    'REMOTE_PORT' => '60380'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/2019/repository/web-skeleton/backend/web/__debug.php'
+    'SCRIPT_NAME' => '/2019/repository/web-skeleton/backend/web/__debug.php'
+    'PHP_SELF' => '/2019/repository/web-skeleton/backend/web/__debug.php'
+    'REQUEST_TIME_FLOAT' => 1552811199.268
+    'REQUEST_TIME' => 1552811199
+]
+2019-03-17 01:27:06 [::1][1][ipjs8eb2tpfkhbcu383lrpu1ko][error][Error] Error: Class 'modules\rbac\models\Permission' not found in E:\www\2019\repository\web-skeleton\modules\main\views\backend\default\index.php:16
+Stack trace:
+#0 E:\www\2019\repository\web-skeleton\vendor\yiisoft\yii2\base\View.php(348): require()
+#1 E:\www\2019\repository\web-skeleton\vendor\yiisoft\yii2\base\View.php(257): yii\base\View->renderPhpFile('E:\\www\\2019\\rep...', Array)
+#2 E:\www\2019\repository\web-skeleton\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('E:\\www\\2019\\rep...', Array, Object(modules\main\controllers\backend\DefaultController))
+#3 E:\www\2019\repository\web-skeleton\vendor\yiisoft\yii2\base\Controller.php(384): yii\base\View->render('index', Array, Object(modules\main\controllers\backend\DefaultController))
+#4 E:\www\2019\repository\web-skeleton\modules\main\controllers\backend\DefaultController.php(54): yii\base\Controller->render('index')
+#5 [internal function]: modules\main\controllers\backend\DefaultController->actionIndex()
+#6 E:\www\2019\repository\web-skeleton\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#7 E:\www\2019\repository\web-skeleton\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#8 E:\www\2019\repository\web-skeleton\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('index', Array)
+#9 E:\www\2019\repository\web-skeleton\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('main/default/in...', Array)
+#10 E:\www\2019\repository\web-skeleton\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#11 E:\www\2019\repository\web-skeleton\backend\web\__debug.php(20): yii\base\Application->run()
+#12 {main}
+2019-03-17 01:27:05 [::1][1][ipjs8eb2tpfkhbcu383lrpu1ko][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-frontend' => 'rqq3clfm4a6ga9oef447u6ov8c'
+    '_csrf' => '117467bf7d5c6e77b3e67e80cf16ebdf03f99df4be239edb52fe68b5a943f5e1a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Flaxvh1SKhw1OFtIakKzaSlh4q19YMav\";}'
+    'PHPSESSID' => 'bumo4pdmo5r0hif5t1bbkd175l'
+    '_csrf_admin' => '9d07e2808d6c775ac048d3587d977af8034d40c69839282bb1dc2ec12ac47d30a:2:{i:0;s:11:\"_csrf_admin\";i:1;s:32:\"c6IgqZeWgvIOLKmMiNeds15RK7MGi9e9\";}'
+    '_csrf-frontend' => '869d95fa8c63fc40d5a3f0208a390e66ab587aeed1345edaf96576b0c2029fc0a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"_WvzqpB6c5EnfbEXgpoLsOFld57dYbYk\";}'
+    'advanced-backend' => 'ipjs8eb2tpfkhbcu383lrpu1ko'
+    '_csrf-backend' => '9ec715fdf1e69d2cc870cb5b5b8288c2815aff60c6aa0091c7d098c65417dc6ca:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"h_0P0skl0o4vojLvLBSMZWN4NeRGm5C0\";}'
+]
+
+$_SESSION = [
+    '__flash' => [
+        'info' => -1
+    ]
+    '__returnUrl' => '/2019/yii-cms/backend/web/__debug.php/users/default/login'
+    '__id' => 1
+    'info' => 'Welcome, admin!'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'E:/xampp_7.2.1/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'E:/xampp_7.2.1/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => 'advanced-frontend=rqq3clfm4a6ga9oef447u6ov8c; _csrf=117467bf7d5c6e77b3e67e80cf16ebdf03f99df4be239edb52fe68b5a943f5e1a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Flaxvh1SKhw1OFtIakKzaSlh4q19YMav%22%3B%7D; PHPSESSID=bumo4pdmo5r0hif5t1bbkd175l; _csrf_admin=9d07e2808d6c775ac048d3587d977af8034d40c69839282bb1dc2ec12ac47d30a%3A2%3A%7Bi%3A0%3Bs%3A11%3A%22_csrf_admin%22%3Bi%3A1%3Bs%3A32%3A%22c6IgqZeWgvIOLKmMiNeds15RK7MGi9e9%22%3B%7D; _csrf-frontend=869d95fa8c63fc40d5a3f0208a390e66ab587aeed1345edaf96576b0c2029fc0a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22_WvzqpB6c5EnfbEXgpoLsOFld57dYbYk%22%3B%7D; advanced-backend=ipjs8eb2tpfkhbcu383lrpu1ko; _csrf-backend=9ec715fdf1e69d2cc870cb5b5b8288c2815aff60c6aa0091c7d098c65417dc6ca%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22h_0P0skl0o4vojLvLBSMZWN4NeRGm5C0%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files (x86)\\MKVToolNix;C:\\Program Files (x86)\\Microsoft SQL Server\\Client SDK\\ODBC\\110\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\120\\DTS\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\120\\Tools\\Binn\\ManagementStudio\\;C:\\WINDOWS\\system32\\config\\systemprofile\\.dnx\\bin;C:\\Program Files\\Microsoft DNX\\Dnvm\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\110\\DTS\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\130\\DTS\\Binn\\;C:\\Program Files (x86)\\SAP\\SAP Business One DI API\\JCO\\LIB\\;C:\\Program Files (x86)\\SAP\\SAP Business One DI API\\DI API 90;C:\\Program Files (x86)\\SAP\\SAP Business One\\;C:\\Program Files\\PuTTY\\;C:\\WINDOWS\\System32\\OpenSSH\\;E:\\xampp_7.2.1\\php;C:\\Users\\hao.THEGIOINUOCHOA\\AppData\\Local\\ComposerSetup\\bin;C:\\Users\\hao.THEGIOINUOCHOA\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Users\\hao.THEGIOINUOCHOA\\AppData\\Local\\GitHubDesktop\\bin;C:\\Git\\cmd;C:\\Users\\hao.THEGIOINUOCHOA\\AppData\\Local\\Microsoft\\WindowsApps;'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Win32) OpenSSL/1.1.0g PHP/7.2.1 Server at localhost Port 8080</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Win32) OpenSSL/1.1.0g PHP/7.2.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '8080'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'E:/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/www'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'E:/www/2019/repository/web-skeleton/backend/web/__debug.php'
+    'REMOTE_PORT' => '60404'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/2019/repository/web-skeleton/backend/web/__debug.php'
+    'SCRIPT_NAME' => '/2019/repository/web-skeleton/backend/web/__debug.php'
+    'PHP_SELF' => '/2019/repository/web-skeleton/backend/web/__debug.php'
+    'REQUEST_TIME_FLOAT' => 1552811225.876
+    'REQUEST_TIME' => 1552811225
+]
+2019-03-17 01:30:02 [::1][1][ipjs8eb2tpfkhbcu383lrpu1ko][error][Error] Error: Class 'modules\rbac\Module' not found in E:\www\2019\repository\web-skeleton\modules\main\views\backend\default\index.php:37
+Stack trace:
+#0 E:\www\2019\repository\web-skeleton\vendor\yiisoft\yii2\base\View.php(348): require()
+#1 E:\www\2019\repository\web-skeleton\vendor\yiisoft\yii2\base\View.php(257): yii\base\View->renderPhpFile('E:\\www\\2019\\rep...', Array)
+#2 E:\www\2019\repository\web-skeleton\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('E:\\www\\2019\\rep...', Array, Object(modules\main\controllers\backend\DefaultController))
+#3 E:\www\2019\repository\web-skeleton\vendor\yiisoft\yii2\base\Controller.php(384): yii\base\View->render('index', Array, Object(modules\main\controllers\backend\DefaultController))
+#4 E:\www\2019\repository\web-skeleton\modules\main\controllers\backend\DefaultController.php(54): yii\base\Controller->render('index')
+#5 [internal function]: modules\main\controllers\backend\DefaultController->actionIndex()
+#6 E:\www\2019\repository\web-skeleton\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#7 E:\www\2019\repository\web-skeleton\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#8 E:\www\2019\repository\web-skeleton\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('index', Array)
+#9 E:\www\2019\repository\web-skeleton\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('main/default/in...', Array)
+#10 E:\www\2019\repository\web-skeleton\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#11 E:\www\2019\repository\web-skeleton\backend\web\__debug.php(20): yii\base\Application->run()
+#12 {main}
+2019-03-17 01:30:02 [::1][1][ipjs8eb2tpfkhbcu383lrpu1ko][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-frontend' => 'rqq3clfm4a6ga9oef447u6ov8c'
+    '_csrf' => '117467bf7d5c6e77b3e67e80cf16ebdf03f99df4be239edb52fe68b5a943f5e1a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Flaxvh1SKhw1OFtIakKzaSlh4q19YMav\";}'
+    'PHPSESSID' => 'bumo4pdmo5r0hif5t1bbkd175l'
+    '_csrf_admin' => '9d07e2808d6c775ac048d3587d977af8034d40c69839282bb1dc2ec12ac47d30a:2:{i:0;s:11:\"_csrf_admin\";i:1;s:32:\"c6IgqZeWgvIOLKmMiNeds15RK7MGi9e9\";}'
+    '_csrf-frontend' => '869d95fa8c63fc40d5a3f0208a390e66ab587aeed1345edaf96576b0c2029fc0a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"_WvzqpB6c5EnfbEXgpoLsOFld57dYbYk\";}'
+    'advanced-backend' => 'ipjs8eb2tpfkhbcu383lrpu1ko'
+    '_csrf-backend' => '9ec715fdf1e69d2cc870cb5b5b8288c2815aff60c6aa0091c7d098c65417dc6ca:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"h_0P0skl0o4vojLvLBSMZWN4NeRGm5C0\";}'
+]
+
+$_SESSION = [
+    '__flash' => [
+        'info' => -1
+    ]
+    '__returnUrl' => '/2019/yii-cms/backend/web/__debug.php/users/default/login'
+    '__id' => 1
+    'info' => 'Welcome, admin!'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'E:/xampp_7.2.1/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'E:/xampp_7.2.1/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => 'advanced-frontend=rqq3clfm4a6ga9oef447u6ov8c; _csrf=117467bf7d5c6e77b3e67e80cf16ebdf03f99df4be239edb52fe68b5a943f5e1a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Flaxvh1SKhw1OFtIakKzaSlh4q19YMav%22%3B%7D; PHPSESSID=bumo4pdmo5r0hif5t1bbkd175l; _csrf_admin=9d07e2808d6c775ac048d3587d977af8034d40c69839282bb1dc2ec12ac47d30a%3A2%3A%7Bi%3A0%3Bs%3A11%3A%22_csrf_admin%22%3Bi%3A1%3Bs%3A32%3A%22c6IgqZeWgvIOLKmMiNeds15RK7MGi9e9%22%3B%7D; _csrf-frontend=869d95fa8c63fc40d5a3f0208a390e66ab587aeed1345edaf96576b0c2029fc0a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22_WvzqpB6c5EnfbEXgpoLsOFld57dYbYk%22%3B%7D; advanced-backend=ipjs8eb2tpfkhbcu383lrpu1ko; _csrf-backend=9ec715fdf1e69d2cc870cb5b5b8288c2815aff60c6aa0091c7d098c65417dc6ca%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22h_0P0skl0o4vojLvLBSMZWN4NeRGm5C0%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files (x86)\\MKVToolNix;C:\\Program Files (x86)\\Microsoft SQL Server\\Client SDK\\ODBC\\110\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\120\\DTS\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\120\\Tools\\Binn\\ManagementStudio\\;C:\\WINDOWS\\system32\\config\\systemprofile\\.dnx\\bin;C:\\Program Files\\Microsoft DNX\\Dnvm\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\110\\DTS\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\130\\DTS\\Binn\\;C:\\Program Files (x86)\\SAP\\SAP Business One DI API\\JCO\\LIB\\;C:\\Program Files (x86)\\SAP\\SAP Business One DI API\\DI API 90;C:\\Program Files (x86)\\SAP\\SAP Business One\\;C:\\Program Files\\PuTTY\\;C:\\WINDOWS\\System32\\OpenSSH\\;E:\\xampp_7.2.1\\php;C:\\Users\\hao.THEGIOINUOCHOA\\AppData\\Local\\ComposerSetup\\bin;C:\\Users\\hao.THEGIOINUOCHOA\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Users\\hao.THEGIOINUOCHOA\\AppData\\Local\\GitHubDesktop\\bin;C:\\Git\\cmd;C:\\Users\\hao.THEGIOINUOCHOA\\AppData\\Local\\Microsoft\\WindowsApps;'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Win32) OpenSSL/1.1.0g PHP/7.2.1 Server at localhost Port 8080</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Win32) OpenSSL/1.1.0g PHP/7.2.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '8080'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'E:/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/www'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'E:/www/2019/repository/web-skeleton/backend/web/__debug.php'
+    'REMOTE_PORT' => '60556'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/2019/repository/web-skeleton/backend/web/__debug.php'
+    'SCRIPT_NAME' => '/2019/repository/web-skeleton/backend/web/__debug.php'
+    'PHP_SELF' => '/2019/repository/web-skeleton/backend/web/__debug.php'
+    'REQUEST_TIME_FLOAT' => 1552811402.201
+    'REQUEST_TIME' => 1552811402
+]
