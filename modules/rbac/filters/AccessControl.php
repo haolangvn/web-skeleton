@@ -38,7 +38,6 @@ class AccessControl extends \yii\filters\AccessControl
         }
 
         do {
-            Yii::trace($controller->getUniqueId(), 'CON');
             if (Yii::$app->user->can('/' . ltrim($controller->getUniqueId() . '/*', '/'))) {
                 return true;
             }
