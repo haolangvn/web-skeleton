@@ -1,16 +1,51 @@
 {
-    "name": "your-vendor-name/package-name",
-    "description": "A short description of what your package does",
-    "require": {
-        "php": "^7.0"
-    },
+    "name": "hlv/web-skeleton",
+    "description": "Yii 2 Advanced start template on Yii2",
+    "keywords": ["framework", "advanced", "project template"],
+    "homepage": "https://github.com/haolangvn/web-skeleton",
     "type": "php",
-    "license": "aaa",
-    "authors": [
+    "support": {
+        "source": "https://github.com/haolangvn/web-skeleton"
+    },
+    "minimum-stability": "stable",
+    "require": {
+        "php": ">=7.0.0",
+        "yiisoft/yii2": "~2.0.15",
+        "yiisoft/yii2-bootstrap": "~2.0.0",
+        "yiisoft/yii2-swiftmailer": "~2.0.0",
+        "yiisoft/yii2-imagine": "^2.0",
+        "yii2tech/ar-softdelete": "~1.0",
+        "almasaeed2010/adminlte": "^2.4",
+        "fortawesome/font-awesome": "^4.6",
+        "driftyco/ionicons": "^2.0",
+        "guzzlehttp/guzzle": "~6.0",
+        "yiisoft/yii2-apidoc": "~2.1.0",
+        "2amigos/yii2-arrayquery-component": "*",
+        "yiisoft/yii2-jui": "^2.0"
+    },
+    "require-dev": {
+        "yiisoft/yii2-debug": "~2.0.0",
+        "yiisoft/yii2-gii": "~2.0.0",
+        "yiisoft/yii2-faker": "~2.0.0",
+        "bower-asset/html5shiv": "*",
+        "bower-asset/respond": "*",
+        "codeception/base": "~2.3.8",
+        "codeception/verify": "~0.3.1",
+        "codeception/specify": "~0.4.3"
+    },
+    "config": {
+        "process-timeout": 1800
+    },
+    "repositories": [
         {
-            "name": "hlv",
-            "email": "haolangvn@gmail.com"
+            "type": "composer",
+            "url": "https://asset-packagist.org"
         }
     ],
-    "minimum-stability": "dev"
+	"authors": [
+        {
+            "name": "kynm",
+            "email": "nguyen.manh.ky@framgia.com"
+        }
+    ],
 }
