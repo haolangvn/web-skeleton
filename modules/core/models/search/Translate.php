@@ -1,14 +1,14 @@
 <?php
 
-namespace modules\core\models\search;
+namespace hp\models\search;
 
 use Yii;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use modules\core\models\Translate as TranslateModel;
+use hp\models\Translate as TranslateModel;
 
 /**
- * Translate represents the model behind the search form of `modules\core\models\Translate`.
+ * Translate represents the model behind the search form of `hp\models\Translate`.
  */
 class Translate extends TranslateModel
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace modules\core\utils;
+namespace hp\utils;
 
 use Yii;
 

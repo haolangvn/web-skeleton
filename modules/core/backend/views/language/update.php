@@ -1,7 +1,7 @@
 <?php
 
 /* @var $this yii\web\View */
-/* @var $model modules\core\models\Language */
+/* @var $model hp\models\Language */
 
 $this->title = Yii::t('app', 'Update {modelClass}: ', [
     'modelClass' => 'Language',

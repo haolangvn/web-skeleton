@@ -1,6 +1,6 @@
 <?php
 
-namespace modules\core\models;
+namespace hp\models;
 
 use Yii;
 
@@ -10,8 +10,9 @@ use Yii;
  * @property string $code Language code: "vi" or "vi_VN".
  * @property string $name Language name in English.
  * @property string $native Native language name.
+ * @property int $is_default
  */
-class Language extends \modules\core\ActiveRecord
+class Language extends \hp\ActiveRecord
 {
     /**
      * {@inheritdoc}
@@ -28,6 +29,7 @@ class Language extends \modules\core\ActiveRecord
     {
         return [
             [['code', 'name', 'native'], 'required'],
+            [['is_default'], 'integer'],
             [['code'], 'string', 'max' => 12],
             [['name', 'native'], 'string', 'max' => 64],
             [['code'], 'unique'],
@@ -43,6 +45,7 @@ class Language extends \modules\core\ActiveRecord
             'code' => Yii::t('app', 'Code'),
             'name' => Yii::t('app', 'Name'),
             'native' => Yii::t('app', 'Native'),
+            'is_default' => Yii::t('app', 'Is Default'),
         ];
     }
 }

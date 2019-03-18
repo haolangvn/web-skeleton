@@ -4,7 +4,7 @@ use yii\helpers\Html;
 use yii\widgets\DetailView;
 
 /* @var $this yii\web\View */
-/* @var $model modules\core\models\Language */
+/* @var $model hp\models\Language */
 
 $this->title = $model->name;
 $this->params['breadcrumbs'][] = ['label' => Yii::t('app', 'Languages'), 'url' => ['index']];
@@ -28,6 +28,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 'code',
                 'name',
                 'native',
+                'is_default',
             ],
         ]) ?>
     </div>

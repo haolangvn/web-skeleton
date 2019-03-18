@@ -1,6 +1,6 @@
 <?php
 
-namespace modules\core\backend;
+namespace hp\backend;
 
 /**
  * Description of Module
@@ -9,6 +9,6 @@ namespace modules\core\backend;
  */
 class Module extends \yii\base\Module {
 
-    private $_basePath = '@modules/core/backend';
+    public $detaultRoute = 'language/index';
 
 }

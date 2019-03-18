@@ -1,16 +1,16 @@
 <?php
 
-namespace modules\core\models;
+namespace hp\models\search;
 
 use Yii;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use modules\core\models\Language;
+use hp\models\Language as LanguageModel;
 
 /**
- * LanguageSearch represents the model behind the search form of `modules\core\models\Language`.
+ * Language represents the model behind the search form of `hp\models\Language`.
  */
-class LanguageSearch extends Language
+class Language extends LanguageModel
 {
     /**
      * @inheritdoc
@@ -19,6 +19,7 @@ class LanguageSearch extends Language
     {
         return [
             [['code', 'name', 'native'], 'safe'],
+            [['is_default'], 'integer'],
         ];
     }
 
@@ -40,7 +41,7 @@ class LanguageSearch extends Language
      */
     public function search($params)
     {
-        $query = Language::find();
+        $query = LanguageModel::find();
 
         // add conditions that should always apply here
 
@@ -56,6 +57,10 @@ class LanguageSearch extends Language
         }
 
         // grid filtering conditions
+        $query->andFilterWhere([
+            'is_default' => $this->is_default,
+        ]);
+
         $query->andFilterWhere(['like', 'code', $this->code])
             ->andFilterWhere(['like', 'name', $this->name])
             ->andFilterWhere(['like', 'native', $this->native]);

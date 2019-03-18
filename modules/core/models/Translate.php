@@ -1,6 +1,6 @@
 <?php
 
-namespace modules\core\models;
+namespace hp\models;
 
 use Yii;
 
@@ -15,7 +15,7 @@ use Yii;
  * @property int $created_at
  * @property int $updated_at
  */
-class Translate extends \modules\core\ActiveRecord {
+class Translate extends \hp\ActiveRecord {
 
     /**
      * {@inheritdoc}
@@ -30,7 +30,6 @@ class Translate extends \modules\core\ActiveRecord {
     public function rules() {
         return [
             [['message', 'category', 'language_code', 'translation'], 'required'],
-            [['created_at', 'updated_at'], 'integer'],
             [['message'], 'string', 'max' => 128],
             [['category', 'translation'], 'string', 'max' => 255],
             [['language_code'], 'string', 'max' => 8],

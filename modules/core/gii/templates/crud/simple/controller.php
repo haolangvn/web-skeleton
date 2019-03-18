@@ -30,9 +30,8 @@ use <?= ltrim($generator->searchModelClass, '\\') . (isset($searchModelAlias) ? 
 <?php else: ?>
 use yii\data\ActiveDataProvider;
 <?php endif; ?>
-use modules\core\Controller;
+use hp\Controller;
 use yii\web\NotFoundHttpException;
-use yii\filters\VerbFilter;
 
 /**
  * <?= $controllerClass ?> implements the CRUD actions for <?= $modelClass ?> model.

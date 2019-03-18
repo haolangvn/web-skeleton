@@ -4,7 +4,7 @@ use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 
 /* @var $this yii\web\View */
-/* @var $model modules\core\models\LanguageSearch */
+/* @var $model hp\models\search\Language */
 /* @var $form yii\widgets\ActiveForm */
 ?>
 
@@ -23,6 +23,8 @@ use yii\widgets\ActiveForm;
     <?= $form->field($model, 'name') ?>
 
     <?= $form->field($model, 'native') ?>
+
+    <?= $form->field($model, 'is_default') ?>
 
     <div class="form-group">
         <?= Html::submitButton(Yii::t('app', 'Search'), ['class' => 'btn btn-primary']) ?>

@@ -4,16 +4,16 @@ use yii\helpers\Html;
 use yii\grid\GridView;
 use yii\widgets\Pjax;
 /* @var $this yii\web\View */
-/* @var $searchModel modules\core\models\search\Translate */
+/* @var $searchModel hp\models\search\Translate */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Translates';
+$this->title = Yii::t('app', 'Translates');
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="translate-index box box-primary">
     <?php Pjax::begin(); ?>
     <div class="box-header with-border">
-        <?= Html::a('Create Translate', ['create'], ['class' => 'btn btn-success btn-flat']) ?>
+        <?= Html::a(Yii::t('app', 'Create Translate'), ['create'], ['class' => 'btn btn-success btn-flat']) ?>
     </div>
     <div class="box-body table-responsive">
         <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
@@ -32,7 +32,10 @@ $this->params['breadcrumbs'][] = $this->title;
                 // 'created_at',
                 // 'updated_at',
 
-                ['class' => 'yii\grid\ActionColumn'],
+                [
+                'class' => 'yii\grid\ActionColumn',
+                'template' => mdm\admin\components\Helper::filterActionColumn(['view', 'update', 'delete'])
+                ],
             ],
         ]); ?>
     </div>

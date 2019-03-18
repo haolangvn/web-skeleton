@@ -26,9 +26,7 @@ return [
             'isBackend' => true,
         ],
         'rbac' => 'mdm\admin\Module',
-//        'admin' => [
-//            'class' => 'mdm\admin\Module',
-//        ],
+        'admin' => 'hp\backend\Module',
         'demo' => [
             'isBackend' => true,
         ]

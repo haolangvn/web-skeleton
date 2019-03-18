@@ -7,10 +7,9 @@ return [
     'aliases' => [
         '@bower' => '@vendor/bower-asset',
         '@npm' => '@vendor/npm-asset',
+        '@hp' => '@modules/core',
     ],
-    'modules' => [
-        'core' => 'modules\core\backend\Module',
-        
+    'modules' => [       
         'main' => [
             'class' => 'modules\main\Module',
         ],

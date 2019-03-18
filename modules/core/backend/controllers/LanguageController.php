@@ -1,13 +1,12 @@
 <?php
 
-namespace modules\core\backend\controllers;
+namespace hp\backend\controllers;
 
 use Yii;
-use modules\core\models\Language;
-use modules\core\models\LanguageSearch;
-use modules\core\Controller;
+use hp\models\Language;
+use hp\models\search\Language as LanguageSearch;
+use hp\Controller;
 use yii\web\NotFoundHttpException;
-use yii\filters\VerbFilter;
 
 /**
  * LanguageController implements the CRUD actions for Language model.

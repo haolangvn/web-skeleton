@@ -3,8 +3,9 @@
 use yii\helpers\Html;
 use yii\grid\GridView;
 use yii\widgets\Pjax;
+
 /* @var $this yii\web\View */
-/* @var $searchModel modules\core\models\LanguageSearch */
+/* @var $searchModel hp\models\search\Language */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
 $this->title = Yii::t('app', 'Languages');
@@ -17,20 +18,23 @@ $this->params['breadcrumbs'][] = $this->title;
     </div>
     <div class="box-body table-responsive">
         <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
-        <?= GridView::widget([
+        <?=
+        GridView::widget([
             'dataProvider' => $dataProvider,
             'filterModel' => $searchModel,
             'layout' => "{items}\n{summary}\n{pager}",
             'columns' => [
                 ['class' => 'yii\grid\SerialColumn'],
-
                 'code',
                 'name',
                 'native',
-
-                ['class' => 'yii\grid\ActionColumn'],
+                'is_default',
+                [
+                    'class' => 'yii\grid\ActionColumn',
+                    'template' => mdm\admin\components\Helper::filterActionColumn(['view', 'update', 'delete'])],
             ],
-        ]); ?>
+        ]);
+        ?>
     </div>
     <?php Pjax::end(); ?>
 </div>

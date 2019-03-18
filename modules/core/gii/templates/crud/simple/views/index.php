@@ -56,7 +56,10 @@ if (($tableSchema = $generator->getTableSchema()) === false) {
 }
 ?>
 
-                ['class' => 'yii\grid\ActionColumn'],
+                [
+                'class' => 'yii\grid\ActionColumn',
+                'template' => mdm\admin\components\Helper::filterActionColumn(['view', 'update', 'delete'])
+                ],
             ],
         ]); ?>
 <?php else: ?>

@@ -1,12 +1,14 @@
 <?php
 
-namespace modules\core\backend\controllers;
+namespace hp\backend\controllers;
 
 use Yii;
-use modules\core\models\Translate;
-use modules\core\models\search\Translate as TranslateSearch;
-use modules\core\Controller;
+use hp\models\Translate;
+use hp\models\search\Translate as TranslateSearch;
+use hp\Controller;
+use hp\models\Language;
 use yii\web\NotFoundHttpException;
+use yii\helpers\ArrayHelper;
 
 /**
  * TranslateController implements the CRUD actions for Translate model.
@@ -49,9 +51,10 @@ class TranslateController extends Controller {
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->id]);
         }
-
+        $language = ArrayHelper::map(Language::find()->where(['not like', 'code', 'en'])->all(), 'code', 'name');
         return $this->render('create', [
                     'model' => $model,
+                    'language' => $language
         ]);
     }
 
@@ -67,9 +70,10 @@ class TranslateController extends Controller {
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->id]);
         }
-
+        $language = ArrayHelper::map(Language::find()->where(['not like', 'code', 'en'])->all(), 'code', 'name');
         return $this->render('update', [
                     'model' => $model,
+                    'language' => $language
         ]);
     }
 

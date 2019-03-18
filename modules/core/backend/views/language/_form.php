@@ -4,7 +4,7 @@ use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 
 /* @var $this yii\web\View */
-/* @var $model modules\core\models\Language */
+/* @var $model hp\models\Language */
 /* @var $form yii\widgets\ActiveForm */
 ?>
 
@@ -17,6 +17,8 @@ use yii\widgets\ActiveForm;
         <?= $form->field($model, 'name')->textInput(['maxlength' => true]) ?>
 
         <?= $form->field($model, 'native')->textInput(['maxlength' => true]) ?>
+
+        <?= $form->field($model, 'is_default')->textInput() ?>
 
     </div>
     <div class="box-footer">

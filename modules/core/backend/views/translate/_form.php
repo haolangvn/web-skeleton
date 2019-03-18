@@ -4,7 +4,7 @@ use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 
 /* @var $this yii\web\View */
-/* @var $model modules\core\models\Translate */
+/* @var $model hp\models\Translate */
 /* @var $form yii\widgets\ActiveForm */
 ?>
 
@@ -12,21 +12,18 @@ use yii\widgets\ActiveForm;
     <?php $form = ActiveForm::begin(); ?>
     <div class="box-body table-responsive">
 
-        <?= $form->field($model, 'message')->textInput() ?>
-
-        <?= $form->field($model, 'category')->textInput(['maxlength' => true]) ?>
-
-        <?= $form->field($model, 'language_code')->textInput(['maxlength' => true]) ?>
-
-        <?= $form->field($model, 'translation')->textInput(['maxlength' => true]) ?>
-
-        <?= $form->field($model, 'created_at')->textInput() ?>
-
-        <?= $form->field($model, 'updated_at')->textInput() ?>
+        <?php
+        echo $form->field($model, 'category')->dropDownList([
+            'label' => 'Label', 'menu' => 'Menu', 'model' => 'Model', 'button' => 'Button'
+        ]);
+        echo $form->field($model, 'language_code')->dropDownList($language);
+        echo $form->field($model, 'message')->textInput(['maxlength' => true, 'placeholder' => 'Default English']);
+        echo $form->field($model, 'translation')->textInput(['maxlength' => true]);
+        ?>
 
     </div>
     <div class="box-footer">
-        <?= Html::submitButton('Save', ['class' => 'btn btn-success btn-flat']) ?>
+        <?= Html::submitButton(Yii::t('app', 'Save'), ['class' => 'btn btn-success btn-flat']) ?>
     </div>
     <?php ActiveForm::end(); ?>
 </div>

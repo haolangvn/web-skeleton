@@ -1,16 +1,18 @@
 <?php
-
 /* @var $this yii\web\View */
-/* @var $model modules\core\models\Translate */
+/* @var $model hp\models\Translate */
 
-$this->title = 'Create Translate';
-$this->params['breadcrumbs'][] = ['label' => 'Translates', 'url' => ['index']];
+$this->title = Yii::t('app', 'Create Translate');
+$this->params['breadcrumbs'][] = ['label' => Yii::t('app', 'Translates'), 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="translate-create">
 
-    <?= $this->render('_form', [
+    <?=
+    $this->render('_form', [
         'model' => $model,
-    ]) ?>
+        'language' => $language
+    ])
+    ?>
 
 </div>

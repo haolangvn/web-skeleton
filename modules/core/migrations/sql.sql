@@ -76,7 +76,8 @@ ALTER TABLE `core_translate`
 CREATE TABLE `core_language` (
   `code` varchar(12) COLLATE utf8_unicode_ci NOT NULL COMMENT 'Language code: "vi" or "vi_VN".',
   `name` varchar(64) COLLATE utf8_unicode_ci NOT NULL COMMENT 'Language name in English.',
-  `native` varchar(64) COLLATE utf8_unicode_ci NOT NULL COMMENT 'Native language name.'
+  `native` varchar(64) COLLATE utf8_unicode_ci NOT NULL COMMENT 'Native language name.',
+    `is_default` int(11) DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
