@@ -37,6 +37,9 @@ php yii migrate
 Initialization RBAC:
 
 ```
-php yii migrate --migrationPath=@yii/rbac/migrations
+Execute migrate/sql or php yii migrate --migrationPath=@yii/rbac/migrations
+```
+
+```
 php yii users/user/create
 ```

@@ -98,4 +98,53 @@ ALTER TABLE `core_language`
   ADD PRIMARY KEY (`code`);
 
 
+--
+-- Table structure for table `tbl_menu`
+--
+
+CREATE TABLE `core_menu` (
+  `id` int(11) NOT NULL,
+  `name` varchar(128) COLLATE utf8_unicode_ci NOT NULL,
+  `parent` int(11) DEFAULT 0,
+  `route` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `weight` int(11) DEFAULT 0,
+  `data` blob,
+    `created_at` int(11) DEFAULT 0,
+    `created_by` int(11) DEFAULT 0,
+    `updated_at` int(11) DEFAULT 0,
+    `updated_by` int(11) DEFAULT 0
+) ENGINE=InnoDB DEFAULT CHARSET=utf8  COLLATE=utf8_unicode_ci;
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `tbl_menu`
+--
+ALTER TABLE `core_menu`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `parent` (`parent`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `tbl_menu`
+--
+ALTER TABLE `core_menu`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `tbl_menu`
+--
+ALTER TABLE `core_menu`
+  ADD CONSTRAINT `core_menu_ibfk_1` FOREIGN KEY (`parent`) REFERENCES `core_menu` (`id`) ON DELETE SET NULL ON UPDATE CASCADE;
+
+
 COMMIT;

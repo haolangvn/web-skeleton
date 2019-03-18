@@ -7,9 +7,12 @@ $params = array_merge(
 return [
     'id' => 'app-backend',
     'language' => 'en', // en, ru
-    //'homeUrl' => '/admin',
+//'homeUrl' => '/admin',
     'basePath' => dirname(__DIR__),
     'defaultRoute' => 'main/default/index',
+    'aliases' => [
+        '@mdm/admin' => '@modules/yii2-admin'
+    ],
     'bootstrap' => [
         'log',
         'modules\main\Bootstrap',
@@ -22,9 +25,10 @@ return [
         'users' => [
             'isBackend' => true,
         ],
-        'rbac' => 'modules\rbac\Module',
-        
-        
+        'rbac' => 'mdm\admin\Module',
+//        'admin' => [
+//            'class' => 'mdm\admin\Module',
+//        ],
         'demo' => [
             'isBackend' => true,
         ]
@@ -58,7 +62,7 @@ return [
             'loginUrl' => ['/users/default/login'],
         ],
         'session' => [
-            // this is the name of the session cookie used for login on the backend
+// this is the name of the session cookie used for login on the backend
             'name' => 'advanced-backend',
         ],
         'log' => [
@@ -103,18 +107,19 @@ return [
         ],
     ],
     'as access' => [
-        'class' => modules\rbac\filters\AccessControl::class,
+//        'class' => modules\rbac\filters\AccessControl::class,
+        'class' => mdm\admin\components\AccessControl::class,
         'allowActions' => [
             'users/default/*',
-            'rbac/*',
+//            'rbac/*',
         // The actions listed here will be allowed to everyone including guests.
-        // So, 'admin/*' should not appear here in the production, of course.
-        // But in the earlier stages of your development, you may probably want to
-        // add a lot of actions here until you finally completed setting up rbac,
-        // otherwise you may not even take a first step.
+// So, 'admin/*' should not appear here in the production, of course.
+// But in the earlier stages of your development, you may probably want to
+// add a lot of actions here until you finally completed setting up rbac,
+// otherwise you may not even take a first step.
         ]
     ],
-    // Последний визит
+// Последний визит
     'as afterAction' => [
         'class' => '\modules\users\behavior\LastVisitBehavior',
     ],

@@ -90,7 +90,11 @@ $homeUrl = is_string(Yii::$app->homeUrl) ? Yii::$app->homeUrl : '/';
                                         <?= AvatarWidget::widget(); ?>
                                         <p>
                                             <?= ucfirst($fullUserName) ?>
-                                            <small><?= UserModule::t('module', 'Member since') . ' ' . $formatter->asDatetime($identity->created_at, 'LLL yyyy') ?></small>
+                                            <small><?php
+                                                if ($identity) {
+                                                    echo UserModule::t('module', 'Member since') . ' ' . $formatter->asDatetime($identity->created_at, 'LLL yyyy');
+                                                }
+                                                ?></small>
                                         </p>
                                     </li>
                                     <li class="user-body">

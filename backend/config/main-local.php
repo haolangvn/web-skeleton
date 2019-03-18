@@ -23,7 +23,7 @@ if (!YII_ENV_TEST || YII_ENV_DEV) {
             'crud' => [
                 'class' => 'yii\gii\generators\crud\Generator',
                 'templates' => [
-                    'adminlte' => '@app/gii/templates/crud/simple',
+                    'adminlte' => '@modules/core/gii/templates/crud/simple',
                 ]
             ]
         ],
