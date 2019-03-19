@@ -24,7 +24,7 @@ class Bootstrap {
         return [
             'class' => 'yii\web\GroupUrlRule',
             'rules' => [
-                'demo/default/index' => 'demo/default/index'
+                'demo' => 'demo/default/index'
             ],
         ];
     }

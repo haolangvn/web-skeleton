@@ -40,7 +40,7 @@ return [
         'log',
         'hp\frontend\Bootstrap',
         'modules\users\Bootstrap',
-        'modules\demo\frontend\Bootstrap',
+//        'modules\demo\frontend\Bootstrap',
     ],
     'modules' => [
         'main' => 'hp\frontend\Module',

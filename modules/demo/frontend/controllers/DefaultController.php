@@ -10,7 +10,7 @@ namespace modules\demo\frontend\controllers;
 class DefaultController extends \hp\Controller {
 
     public function actionIndex() {
-//        return $this->render('index');
+        return $this->render('index');
     }
 
 }

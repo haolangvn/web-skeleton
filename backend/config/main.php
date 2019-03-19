@@ -72,7 +72,7 @@ return [
         'urlManager' => [
             'enablePrettyUrl' => true,
             'showScriptName' => true,
-            'enableStrictParsing' => true,
+            'enableStrictParsing' => false,
             'rules' => [
                 '<_m>/<_c>' => '<_m>/<_c>/index',
                 '<_m>/<_c>/<_a>' => '<_m>/<_c>/<_a>',
