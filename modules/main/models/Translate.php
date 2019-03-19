@@ -21,7 +21,7 @@ class Translate extends \hp\ActiveRecord {
      * {@inheritdoc}
      */
     public static function tableName() {
-        return '{{%core_translate}}';
+        return '{{%main_translate}}';
     }
 
     /**

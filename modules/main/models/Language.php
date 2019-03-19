@@ -19,7 +19,7 @@ class Language extends \hp\ActiveRecord
      */
     public static function tableName()
     {
-        return '{{%core_language}}';
+        return '{{%main_language}}';
     }
 
     /**
