@@ -7,7 +7,7 @@ return [
     'aliases' => [
         '@bower' => '@vendor/bower-asset',
         '@npm' => '@vendor/npm-asset',
-        '@hp' => '@modules/main',
+        '@hp' => '@modules/hp-main',
     ],
     'modules' => [
         'users' => [
