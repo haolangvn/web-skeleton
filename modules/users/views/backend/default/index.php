@@ -139,7 +139,7 @@ $this->registerJs($js, \yii\web\View::POS_END);
                             /** @var object $identity */
                             $identity = Yii::$app->user->identity;
                             /** @var \modules\users\models\User $data */
-                            if ($data->id !== $identity->id && !$data->isSuperAdmin($data->id)) {
+                            if ($data->id !== $identity->id) {
                                 return Html::a($data->statusLabelName, Url::to(['set-status', 'id' => $data->id]), [
                                         'id' => $data->id,
                                         'class' => 'link-status',

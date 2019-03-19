@@ -38,13 +38,13 @@ UserAsset::register($this);
                 'profile.last_name',
                 'email:email',
                 'profile.email_gravatar',
-                [
-                    'attribute' => 'userRoleName',
-                    'format' => 'raw',
-                    'value' => function ($model) use ($assignModel) {
-                        return $assignModel->getRoleName($model->id);
-                    },
-                ],
+//                [
+//                    'attribute' => 'userRoleName',
+//                    'format' => 'raw',
+//                    'value' => function ($model) use ($assignModel) {
+//                        return $assignModel->getRoleName($model->id);
+//                    },
+//                ],
                 [
                     'attribute' => 'status',
                     'format' => 'raw',

@@ -26,20 +26,26 @@ $items = MenuHelper::getAssignedMenu(Yii::$app->user->id, null, function ($menu)
             ];
         });
 
+if (YII_DEBUG) {
+//    $items[] = [
+//        'label' => Yii::t('app', 'Navigation'),
+//        'options' => ['class' => 'header',],
+//    ];
+    $items[] = [
+        'label' => Yii::t('app', 'Yii Tool'),
+        'options' => ['class' => 'header',],
+    ];
 
-$items[] = [
-    'label' => Yii::t('app', 'Yii Tool'),
-    'options' => ['class' => 'header',],
-];
+    $items[] = [
+        'label' => '<i class="fa fa-file-code-o"></i> <span>' . Yii::t('app', 'Gii') . '</span>',
+        'url' => ['/gii']
+    ];
+    $items[] = [
+        'label' => '<i class="fa fa-share"></i> <span>' . Yii::t('app', 'Debug') . '</span>',
+        'url' => ['/gii']
+    ];
+}
 
-$items[] = [
-    'label' => '<i class="fa fa-file-code-o"></i> <span>' . Yii::t('app', 'Gii') . '</span>',
-    'url' => ['/gii']
-];
-$items[] = [
-    'label' => '<i class="fa fa-share"></i> <span>' . Yii::t('app', 'Debug') . '</span>',
-    'url' => ['/gii']
-];
 
 
 echo Menu::widget([

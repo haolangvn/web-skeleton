@@ -16,8 +16,8 @@ class DefaultController extends \hp\Controller {
         //Greeting in the admin panel :)
         /** @var User $identity */
         $identity = UShort::user()->identity;
-        UShort::session()->setFlash('info', UTranslate::t('label', 'Welcome, {:username}!', [
-                    ':username' => $identity->username
+        UShort::session()->setFlash('info', UTranslate::t('label', 'Welcome, {username}!', [
+                    '{username}' => $identity->username
         ]));
         return $this->render('index');
     }

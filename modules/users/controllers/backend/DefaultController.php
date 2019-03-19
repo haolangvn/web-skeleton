@@ -7,7 +7,6 @@ use yii\web\Response;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use modules\users\models\LoginForm;
-use yii\rbac\Assignment;
 use modules\users\models\User;
 use modules\users\models\search\UserSearch;
 use modules\users\Module;
@@ -74,11 +73,9 @@ class DefaultController extends Controller {
     public function actionIndex() {
         $searchModel = new UserSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
-        $assignModel = new Assignment();
         return $this->render('index', [
                     'searchModel' => $searchModel,
-                    'dataProvider' => $dataProvider,
-                    'assignModel' => $assignModel,
+                    'dataProvider' => $dataProvider
         ]);
     }
 
@@ -90,12 +87,12 @@ class DefaultController extends Controller {
      */
     public function actionView($id) {
         if ($model = $this->findModel($id)) {
-            $assignModel = new Assignment([
-                'user' => $model
-            ]);
+//            $assignModel = new Assignment([
+//                'user' => $model
+//            ]);
             return $this->render('view', [
                         'model' => $model,
-                        'assignModel' => $assignModel,
+//                        'assignModel' => $assignModel,
             ]);
         }
         return $this->redirect(['index']);

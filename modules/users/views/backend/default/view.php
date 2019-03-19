@@ -30,7 +30,7 @@ $this->params['breadcrumbs'][] = Module::t('module', 'View');
                         'label' => Module::t('module', 'Profile'),
                         'content' => $this->render('tabs/_view_profile', [
                             'model' => $model,
-                            'assignModel' => $assignModel,
+//                            'assignModel' => $assignModel,
                         ]),
                         'options' => ['id' => 'profile'],
                         'active' => (!Yii::$app->request->get('tab') || (Yii::$app->request->get('tab') == 'profile')) ? true : false,
