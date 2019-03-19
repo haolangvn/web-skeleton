@@ -4,7 +4,7 @@
 
 Create a project:
 ```
-composer create-project --prefer-dist --stability=dev hlv/yii2-advanced-start web-skeleton
+composer create-project --prefer-dist --stability=dev hlv/web-skeleton
 ```
 
 Init an environment:
