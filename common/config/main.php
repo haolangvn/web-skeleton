@@ -7,18 +7,12 @@ return [
     'aliases' => [
         '@bower' => '@vendor/bower-asset',
         '@npm' => '@vendor/npm-asset',
-        '@hp' => '@modules/core',
+        '@hp' => '@modules/main',
     ],
-    'modules' => [       
-        'main' => [
-            'class' => 'modules\main\Module',
-        ],
+    'modules' => [
         'users' => [
             'class' => 'modules\users\Module',
         ],
-        'demo' => [
-            'class' => 'modules\demo\Module'
-        ]
     ],
     'components' => [
         'db' => [
@@ -44,8 +38,5 @@ return [
             'appendTimestamp' => true,
             'basePath' => '@app/web/assets',
         ],
-//        'pathMap' => [
-//            '@modules' => '@app/modules'
-//        ]
     ],
 ];

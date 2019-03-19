@@ -3,9 +3,9 @@
 /* @var $this yii\web\View */
 
 use yii\helpers\Html;
-use modules\main\Module;
+use hp\utils\UTranslate;
 
-$this->title = Module::t('module', 'About');
+$this->title = UTranslate::t(UTranslate::TYPE_LABEL, 'About');
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="main-frontend-default-about">

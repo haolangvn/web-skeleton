@@ -9,7 +9,7 @@ use yii\bootstrap\NavBar;
 use yii\widgets\Breadcrumbs;
 use frontend\assets\AppAsset;
 use common\widgets\Alert;
-use modules\main\Module as MainModule;
+use hp\utils\UTranslate;
 use modules\users\Module as UserModule;
 
 AppAsset::register($this);
@@ -37,9 +37,9 @@ AppAsset::register($this);
                 ],
             ]);
             $menuItems = [
-                ['label' => MainModule::t('module', 'Home'), 'url' => ['/main/default/index']],
-                ['label' => MainModule::t('module', 'About'), 'url' => ['/main/default/about']],
-                ['label' => MainModule::t('module', 'Contact'), 'url' => ['/main/default/contact']],
+                ['label' => UTranslate::t(UTranslate::TYPE_MENU, 'Home'), 'url' => ['/main/default/index']],
+                ['label' => UTranslate::t(UTranslate::TYPE_MENU, 'About'), 'url' => ['/main/default/about']],
+                ['label' => UTranslate::t(UTranslate::TYPE_MENU, 'Contact'), 'url' => ['/main/default/contact']],
             ];
             if (Yii::$app->user->isGuest) {
                 $menuItems[] = ['label' => UserModule::t('module', 'Sign Up'), 'url' => ['/users/default/signup']];
@@ -55,7 +55,7 @@ AppAsset::register($this);
                     ],
                 ];
             }
-            $menuItems[] = ['label' => MainModule::t('module', 'Demo Link'), 'url' => ['/demo/default/index']];
+            $menuItems[] = ['label' => UTranslate::t(UTranslate::TYPE_MENU, 'Demo Link'), 'url' => ['/demo/default/index']];
             echo Nav::widget([
                 'options' => ['class' => 'navbar-nav navbar-right'],
                 'activateParents' => true,
@@ -72,7 +72,7 @@ AppAsset::register($this);
                 ])
                 ?>
                 <?= Alert::widget() ?>
-<?= $content ?>
+                <?= $content ?>
             </div>
         </div>
 
@@ -84,7 +84,7 @@ AppAsset::register($this);
             </div>
         </footer>
 
-<?php $this->endBody() ?>
+        <?php $this->endBody() ?>
     </body>
 </html>
 <?php $this->endPage() ?>

@@ -9,27 +9,21 @@ return [
     'language' => 'en', // en, ru
 //'homeUrl' => '/admin',
     'basePath' => dirname(__DIR__),
-    'defaultRoute' => 'main/default/index',
+    'defaultRoute' => '/main/default/index',
     'aliases' => [
         '@mdm/admin' => '@modules/yii2-admin'
     ],
     'bootstrap' => [
         'log',
-        'modules\main\Bootstrap',
         'modules\users\Bootstrap'
     ],
     'modules' => [
-        'main' => [
-            'isBackend' => true,
-        ],
+        'main' => 'hp\backend\Module',
+        'rbac' => 'mdm\admin\Module',
         'users' => [
             'isBackend' => true,
         ],
-        'rbac' => 'mdm\admin\Module',
-        'admin' => 'hp\backend\Module',
-        'demo' => [
-            'isBackend' => true,
-        ]
+        'demo' => 'modules\demo\backend\Module'
     ],
     'components' => [
         'request' => [

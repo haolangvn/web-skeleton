@@ -9,9 +9,9 @@ use yii\helpers\Html;
 use yii\helpers\Url;
 use yii\bootstrap\ActiveForm;
 use yii\captcha\Captcha;
-use modules\main\Module;
+use hp\utils\UTranslate;
 
-$this->title = Module::t('module', 'Contact');
+$this->title = UTranslate::t(UTranslate::TYPE_LABEL, 'Contact');
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 
@@ -19,7 +19,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
-        <?= Module::t('module', 'If you have business inquiries or other questions, please fill out the following form to contact us. Thank you.'); ?>
+        <?= UTranslate::t(UTranslate::TYPE_LABEL, 'If you have business inquiries or other questions, please fill out the following form to contact us. Thank you.'); ?>
     </p>
 
     <div class="row">
@@ -46,15 +46,15 @@ $this->params['breadcrumbs'][] = $this->title;
                         'captchaAction' => Url::to('/main/default/captcha'),
                         'imageOptions' => [
                             'style' => 'display:block; border:none; cursor: pointer',
-                            'alt' => Module::t('module', 'Code'),
-                            'title' => Module::t('module', 'Click on the picture to change the code.'),
+                            'alt' => UTranslate::t(UTranslate::TYPE_LABEL, 'Code'),
+                            'title' => UTranslate::t(UTranslate::TYPE_LABEL, 'Click on the picture to change the code.'),
                         ],
                         'class' => 'form-control',
                     ]) ?>
                 </div>
             <?php endif; ?>
             <div class="form-group">
-                <?= Html::submitButton('<span class="glyphicon glyphicon-send"></span> ' . Module::t('module', 'Submit'), ['class' => 'btn btn-primary', 'name' => 'contact-button']) ?>
+                <?= Html::submitButton('<span class="glyphicon glyphicon-send"></span> ' . UTranslate::t(UTranslate::TYPE_LABEL, 'Submit'), ['class' => 'btn btn-primary', 'name' => 'contact-button']) ?>
             </div>
 
             <?php ActiveForm::end(); ?>

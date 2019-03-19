@@ -2,9 +2,9 @@
 
 /* @var $this yii\web\View */
 
-use modules\main\Module;
+use hp\utils\UTranslate;
 
-$this->title = Module::t('module', 'Home');
+$this->title = UTranslate::t(UTranslate::TYPE_LABEL, 'Home');
 ?>
 
 <div class="main-frontend-default-index">

@@ -7,11 +7,10 @@ use backend\assets\AppAsset;
 use backend\assets\plugins\iCheckAsset;
 use yii\helpers\Html;
 use yii\helpers\Url;
-use yii\widgets\Menu;
 use yii\widgets\Breadcrumbs;
 use common\widgets\Alert;
+use hp\utils\UTranslate;
 use modules\users\widgets\AvatarWidget;
-use modules\main\Module as MainModule;
 use modules\users\Module as UserModule;
 
 iCheckAsset::register($this);
@@ -164,7 +163,7 @@ $homeUrl = is_string(Yii::$app->homeUrl) ? Yii::$app->homeUrl : '/';
                     </h1>
                     <?=
                     Breadcrumbs::widget([
-                        'homeLink' => ['label' => '<i class="fa fa-dashboard"></i> ' . MainModule::t('module', 'Home'), 'url' => Url::to(['/main/default/index'])],
+                        'homeLink' => ['label' => '<i class="fa fa-dashboard"></i> ' . UTranslate::t('label', 'Home'), 'url' => Url::to(['/main/default/index'])],
                         'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
                         'encodeLabels' => false,
                     ])

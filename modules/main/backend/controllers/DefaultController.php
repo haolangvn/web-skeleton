@@ -2,6 +2,9 @@
 
 namespace hp\backend\controllers;
 
+use hp\utils\UShort;
+use hp\utils\UTranslate;
+
 /**
  * Description of DefaultController
  *
@@ -12,8 +15,8 @@ class DefaultController extends \hp\Controller {
     public function actionIndex() {
         //Greeting in the admin panel :)
         /** @var User $identity */
-        $identity = Yii::$app->user->identity;
-        Yii::$app->session->setFlash('info', Module::t('module', 'Welcome, {:username}!', [
+        $identity = UShort::user()->identity;
+        UShort::session()->setFlash('info', UTranslate::t('label', 'Welcome, {:username}!', [
                     ':username' => $identity->username
         ]));
         return $this->render('index');

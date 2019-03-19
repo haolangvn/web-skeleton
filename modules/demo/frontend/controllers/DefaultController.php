@@ -7,10 +7,10 @@ namespace modules\demo\frontend\controllers;
  *
  * @author HAO
  */
-class DefaultController extends \yii\web\Controller {
+class DefaultController extends \hp\Controller {
 
     public function actionIndex() {
-        return $this->render('index');
+//        return $this->render('index');
     }
 
 }

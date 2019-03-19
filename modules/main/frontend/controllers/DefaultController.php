@@ -1,24 +1,22 @@
 <?php
 
-namespace modules\main\controllers\frontend;
+namespace hp\frontend\controllers;
 
 use Yii;
-use yii\web\Controller;
-use modules\main\models\frontend\ContactForm;
-use modules\main\Module;
+use hp\Controller;
+use hp\models\ContactForm;
 
 /**
  * Class DefaultController
  * @package modules\main\controllers\frontend
  */
-class DefaultController extends Controller
-{
+class DefaultController extends Controller {
+
     /**
      * @inheritdoc
      * @return array
      */
-    public function actions()
-    {
+    public function actions() {
         return [
             'error' => [
                 'class' => 'yii\web\ErrorAction',
@@ -36,8 +34,7 @@ class DefaultController extends Controller
      * Renders the index view for the module
      * @return string
      */
-    public function actionIndex()
-    {
+    public function actionIndex() {
         return $this->render('index');
     }
 
@@ -46,8 +43,7 @@ class DefaultController extends Controller
      *
      * @return mixed|\yii\web\Response
      */
-    public function actionContact()
-    {
+    public function actionContact() {
         $model = new ContactForm();
         if (Yii::$app->user->isGuest) {
             $model->scenario = $model::SCENARIO_GUEST;
@@ -64,7 +60,7 @@ class DefaultController extends Controller
         }
 
         return $this->render('contact', [
-            'model' => $model,
+                    'model' => $model,
         ]);
     }
 
@@ -72,12 +68,11 @@ class DefaultController extends Controller
      * @param ContactForm $model
      * @return \yii\web\Response
      */
-    protected function processSendEmail($model)
-    {
+    protected function processSendEmail($model) {
         if ($model->sendEmail(Yii::$app->params['adminEmail'])) {
-            Yii::$app->session->setFlash('success', Module::t('module', 'Thank you for contacting us. We will respond to you as soon as possible.'));
+            Yii::$app->session->setFlash('success', UTranslate::t(UTranslate::TYPE_LABEL, 'Thank you for contacting us. We will respond to you as soon as possible.'));
         } else {
-            Yii::$app->session->setFlash('error', Module::t('module', 'There was an error sending email.'));
+            Yii::$app->session->setFlash('error', UTranslate::t(UTranslate::TYPE_LABEL, 'There was an error sending email.'));
         }
         return $this->refresh();
     }
@@ -87,8 +82,8 @@ class DefaultController extends Controller
      *
      * @return mixed
      */
-    public function actionAbout()
-    {
+    public function actionAbout() {
         return $this->render('about');
     }
+
 }

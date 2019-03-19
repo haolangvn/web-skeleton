@@ -35,12 +35,16 @@ return [
     'language' => 'vi',
     //'homeUrl' => '/',
     'basePath' => dirname(__DIR__),
-    'defaultRoute' => 'main/default/index',
+//    'defaultRoute' => 'demo/default/index',
     'bootstrap' => [
         'log',
-        'modules\main\Bootstrap',
+        'hp\frontend\Bootstrap',
         'modules\users\Bootstrap',
-        'modules\demo\Bootstrap',
+        'modules\demo\frontend\Bootstrap',
+    ],
+    'modules' => [
+        'main' => 'hp\frontend\Module',
+        'demo' => 'modules\demo\frontend\Module'
     ],
     'components' => [
         'request' => [
@@ -65,7 +69,7 @@ return [
             'loginUrl' => ['/users/default/login'],
         ],
         'session' => [
-            // this is the name of the session cookie used for login on the frontend
+// this is the name of the session cookie used for login on the frontend
             'name' => 'advanced-frontend',
         ],
         'log' => [
@@ -85,6 +89,8 @@ return [
             'showScriptName' => true,
             'enableStrictParsing' => true,
             'rules' => [
+                '<_m>/<_c>' => '<_m>/<_c>/index',
+                '<_m>/<_c>/<_a>' => '<_m>/<_c>/<_a>',
             ],
         ],
         'urlManagerBackend' => [
